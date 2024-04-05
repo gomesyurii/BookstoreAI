@@ -19,8 +19,7 @@ public class BookstoreAssistantController {
     }
 
     @GetMapping("/informations")
-    public String bookstoreChat(
-            @RequestParam(value = "message", defaultValue = "Quais os melhores livros nacionais do último ano?") String message) {
+    public String bookstoreChat( @RequestParam(value = "message", defaultValue = "Quais os melhores livros nacionais do último ano?") String message) {
 
         return chatClient.call(message);
     }
